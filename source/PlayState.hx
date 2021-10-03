@@ -1719,7 +1719,7 @@ class PlayState extends MusicBeatState
 			{
 				opponentStrums.add(babyArrow);
 			}
-
+			FlxTween.tween(babyArrow, {y: babyArrow.y + 25 }, 1, { type: FlxTweenType.PINGPONG, ease: FlxEase.quadInOut, startDelay: 0.25 * i});
 			babyArrow.playAnim('static');
 			babyArrow.x += 50;
 			babyArrow.x += ((FlxG.width / 2) * player);
