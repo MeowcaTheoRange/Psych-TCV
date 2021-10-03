@@ -1,5 +1,6 @@
 package;
 
+import flixel.system.FlxSoundGroup;
 #if desktop
 import Discord.DiscordClient;
 import sys.thread.Thread;

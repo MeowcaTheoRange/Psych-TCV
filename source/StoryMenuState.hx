@@ -1,5 +1,6 @@
 package;
 
+import flixel.system.FlxSound;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -330,7 +331,6 @@ class StoryMenuState extends MusicBeatState
 		txtWeekTitle.x = (FlxG.width / 2) - (txtWeekTitle.width / 2);
 
 		var bullShit:Int = 0;
-
 		for (item in grpWeekText.members)
 		{
 			item.targetY = bullShit - curWeek;
@@ -339,6 +339,10 @@ class StoryMenuState extends MusicBeatState
 			else
 				item.alpha = 0.6;
 			bullShit++;
+			var curmuspos = FlxG.sound.music.time;
+			FlxG.sound.playMusic(Paths.music('freakyMenuweek' + curWeek), 1, true);
+			trace(FlxG.sound.music);
+			FlxG.sound.music.time = curmuspos;
 		}
 
 		bgSprite.visible = true;
