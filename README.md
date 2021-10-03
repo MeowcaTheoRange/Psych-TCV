@@ -67,13 +67,6 @@ NOTE: This should be used for fixing your character floating or being slightly u
 * Added a different BG to every song (less Tutorial)
 * All menu characters are now in individual spritesheets, makes modding it easier.
 
-## Credits menu
-![](https://i.imgur.com/NdIQt3d.png)
-* You can add a head icon, name, description and a Redirect link for when the player presses Enter while the item is currently selected.
-
-## Awards/Achievements
-* The engine comes with 16 example achievements that you can mess with and learn how it works (Check Achievements.hx and search for "checkForAchievement" on PlayState.hx)
-
 ## Options menu:
 * You can change Note colors, Controls and Preferences there.
  * On Preferences you can toggle Downscroll, Anti-Aliasing, Framerate, Low Quality, Note Splashes, Hide Hud elements, Flashing Lights, etc.
@@ -84,3 +77,4 @@ NOTE: This should be used for fixing your character floating or being slightly u
 * Some stuff based on Week 7's changes has been put in (Background colors on Freeplay, Note splashes)
 * You can reset your Score on Freeplay/Story Mode by pressing Reset button.
 * You can listen to a song on Freeplay by pressing Space once.
+* On successful note presses, notes now make a sound.
