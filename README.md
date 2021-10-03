@@ -62,11 +62,6 @@ _____________________________________
 * Go back to the game by pressing Escape
 NOTE: This should be used for fixing your character floating or being slightly under the ground! It's not for texture editting.
 
-## Story mode menu rework:
-![](https://i.imgur.com/UB2EKpV.png)
-* Added a different BG to every song (less Tutorial)
-* All menu characters are now in individual spritesheets, makes modding it easier.
-
 ## Options menu:
 * You can change Note colors, Controls and Preferences there.
  * On Preferences you can toggle Downscroll, Anti-Aliasing, Framerate, Low Quality, Note Splashes, Hide Hud elements, Flashing Lights, etc.
