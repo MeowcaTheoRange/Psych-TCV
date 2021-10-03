@@ -25,7 +25,7 @@ using StringTools;
 class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '0.4.1'; //This is also used for Discord RPC
-	public static var TCVer:String = '0.0.32'; //This is also not used for Discord RPC... epic.
+	public static var TCVer:String = '0.1.8'; //This is also not used for Discord RPC... epic.
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -243,11 +243,6 @@ class MainMenuState extends MusicBeatState
 		}
 
 		super.update(elapsed);
-
-		menuItems.forEach(function(spr:FlxSprite)
-		{
-			spr.screenCenter(X);
-		});
 	}
 
 	function changeItem(huh:Int = 0)
@@ -259,6 +254,7 @@ class MainMenuState extends MusicBeatState
 		if (curSelected < 0)
 			curSelected = menuItems.length - 1;
 
+		var i:Int = 0;
 		menuItems.forEach(function(spr:FlxSprite)
 		{
 			spr.animation.play('idle');
@@ -273,6 +269,10 @@ class MainMenuState extends MusicBeatState
 				spr.offset.y = 0.15 * spr.frameHeight;
 				FlxG.log.add(spr.frameWidth);
 			}
+			else {
+				FlxTween.tween(spr, { x: 96 + (32 * (i + i)) }, 0.2, {ease: FlxEase.quadInOut});
+			}
+			i++;
 		});
 	}
 }
