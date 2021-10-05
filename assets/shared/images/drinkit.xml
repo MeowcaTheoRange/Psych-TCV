@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="OWIENOTE_assets.png">
+	<!--
+	Created with ShoeBox
+	http://renderhjs.net/shoebox/
+	-->
+	<SubTexture name="OWIENOTE_assets_01.png"	x="0"	y="0"	width="183"	height="171" frameX="-0" frameY="-0" frameWidth="183" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_02.png"	x="178"	y="800"	width="171"	height="159" frameX="-0" frameY="-0" frameWidth="171" frameHeight="159"/>
+	<SubTexture name="OWIENOTE_assets_03.png"	x="178"	y="960"	width="171"	height="156" frameX="-0" frameY="-0" frameWidth="171" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_04.png"	x="350"	y="700"	width="156"	height="174" frameX="-0" frameY="-0" frameWidth="156" frameHeight="174"/>
+	<SubTexture name="OWIENOTE_assets_05.png"	x="0"	y="172"	width="180"	height="156" frameX="-0" frameY="-0" frameWidth="180" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_06.png"	x="178"	y="643"	width="171"	height="156" frameX="-0" frameY="-0" frameWidth="171" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_07.png"	x="178"	y="1274"	width="168"	height="171" frameX="-0" frameY="-0" frameWidth="168" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_08.png"	x="350"	y="875"	width="156"	height="171" frameX="-0" frameY="-0" frameWidth="156" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_09.png"	x="507"	y="525"	width="150"	height="174" frameX="-0" frameY="-0" frameWidth="150" frameHeight="174"/>
+	<SubTexture name="OWIENOTE_assets_10.png"	x="0"	y="329"	width="180"	height="156" frameX="-0" frameY="-0" frameWidth="180" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_11.png"	x="178"	y="486"	width="171"	height="156" frameX="-0" frameY="-0" frameWidth="171" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_12.png"	x="507"	y="353"	width="153"	height="171" frameX="-0" frameY="-0" frameWidth="153" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_13.png"	x="0"	y="1307"	width="177"	height="165" frameX="-0" frameY="-0" frameWidth="177" frameHeight="165"/>
+	<SubTexture name="OWIENOTE_assets_14.png"	x="0"	y="1473"	width="174"	height="156" frameX="-0" frameY="-0" frameWidth="174" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_15.png"	x="178"	y="1117"	width="168"	height="156" frameX="-0" frameY="-0" frameWidth="168" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_16.png"	x="350"	y="1639"	width="159"	height="171" frameX="-0" frameY="-0" frameWidth="159" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_17.png"	x="0"	y="990"	width="177"	height="156" frameX="-0" frameY="-0" frameWidth="177" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_18.png"	x="0"	y="1630"	width="174"	height="159" frameX="-0" frameY="-0" frameWidth="174" frameHeight="159"/>
+	<SubTexture name="OWIENOTE_assets_19.png"	x="184"	y="0"	width="165"	height="171" frameX="-0" frameY="-0" frameWidth="165" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_20.png"	x="0"	y="486"	width="177"	height="156" frameX="-0" frameY="-0" frameWidth="177" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_21.png"	x="175"	y="1630"	width="174"	height="156" frameX="-0" frameY="-0" frameWidth="174" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_22.png"	x="181"	y="172"	width="165"	height="177" frameX="-0" frameY="-0" frameWidth="165" frameHeight="177"/>
+	<SubTexture name="OWIENOTE_assets_23.png"	x="350"	y="0"	width="159"	height="171" frameX="-0" frameY="-0" frameWidth="159" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_24.png"	x="0"	y="1147"	width="177"	height="159" frameX="-0" frameY="-0" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="OWIENOTE_assets_25.png"	x="0"	y="1790"	width="174"	height="156" frameX="-0" frameY="-0" frameWidth="174" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_26.png"	x="347"	y="1117"	width="162"	height="177" frameX="-0" frameY="-0" frameWidth="162" frameHeight="177"/>
+	<SubTexture name="OWIENOTE_assets_27.png"	x="347"	y="1295"	width="162"	height="171" frameX="-0" frameY="-0" frameWidth="162" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_28.png"	x="0"	y="643"	width="177"	height="171" frameX="-0" frameY="-0" frameWidth="177" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_29.png"	x="175"	y="1787"	width="174"	height="171" frameX="-0" frameY="-0" frameWidth="174" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_30.png"	x="347"	y="172"	width="162"	height="180" frameX="-0" frameY="-0" frameWidth="162" frameHeight="180"/>
+	<SubTexture name="OWIENOTE_assets_31.png"	x="350"	y="1811"	width="159"	height="171" frameX="-0" frameY="-0" frameWidth="159" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_32.png"	x="350"	y="525"	width="156"	height="174" frameX="-0" frameY="-0" frameWidth="156" frameHeight="174"/>
+	<SubTexture name="OWIENOTE_assets_33.png"	x="0"	y="815"	width="177"	height="174" frameX="-0" frameY="-0" frameWidth="177" frameHeight="174"/>
+	<SubTexture name="OWIENOTE_assets_34.png"	x="175"	y="1473"	width="174"	height="156" frameX="-0" frameY="-0" frameWidth="174" frameHeight="156"/>
+	<SubTexture name="OWIENOTE_assets_35.png"	x="350"	y="1467"	width="159"	height="171" frameX="-0" frameY="-0" frameWidth="159" frameHeight="171"/>
+	<SubTexture name="OWIENOTE_assets_36.png"	x="350"	y="353"	width="156"	height="171" frameX="-0" frameY="-0" frameWidth="156" frameHeight="171"/>
+</TextureAtlas>
