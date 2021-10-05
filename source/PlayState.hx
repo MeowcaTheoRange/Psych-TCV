@@ -3456,6 +3456,41 @@ class PlayState extends MusicBeatState
 						}
 					}
 					return;
+				case 'Glitch Note': //OWIE note
+					if(cpuControlled) return;
+
+					if(!boyfriend.stunned)
+					{
+						noteMiss(note.noteData);
+						if(!endingSong)
+						{
+							--songMisses;
+							RecalculateRating();
+							health = 0.25;
+							if(!note.isSustainNote) {
+								if(!note.noteSplashDisabled) {
+									spawnNoteSplashOnNote(note);
+								}
+							}
+							else health -= 0.04;
+	
+							if(boyfriend.animation.getByName('hurt') != null) {
+								boyfriend.playAnim('hurt', true);
+								boyfriend.specialAnim = true;
+							}
+						}
+
+						note.wasGoodHit = true;
+						vocals.volume = 0;
+
+						if (!note.isSustainNote)
+						{
+							note.kill();
+							notes.remove(note, true);
+							note.destroy();
+						}
+					}
+					return;
 			}
 
 			if (!note.isSustainNote)
