@@ -1,5 +1,6 @@
 package;
 
+import haxe.rtti.CType.Rights;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -139,6 +140,7 @@ class PlayState extends MusicBeatState
 	public var opponentStrums:FlxTypedGroup<StrumNote>;
 	public var playerStrums:FlxTypedGroup<StrumNote>;
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
+	public var vinesNShit:FlxTypedGroup<FlxSprite>;
 
 	public var camZooming:Bool = false;
 	private var curSong:String = "";
@@ -789,8 +791,10 @@ class PlayState extends MusicBeatState
 		timeBarBG.sprTracker = timeBar;
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
+		vinesNShit = new FlxTypedGroup<FlxSprite>();
 		add(strumLineNotes);
 		add(grpNoteSplashes);
+		add(vinesNShit);
 
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
 		grpNoteSplashes.add(splash);
@@ -899,6 +903,7 @@ class PlayState extends MusicBeatState
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
+		vinesNShit.cameras = [camOther];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
@@ -2814,6 +2819,21 @@ class PlayState extends MusicBeatState
 			
 			case 'BG Freaks Expression':
 				if(bgGirls != null) bgGirls.swapDanceType();
+			
+			case 'vine sex real':
+				var height:Int = Std.parseInt(value1);
+				if(Math.isNaN(height)) height = 480;
+				var vine = new FlxSprite(FlxG.width + 350, height);
+				vine.loadGraphic(Paths.image("fxandshit/EpicVineLOL"));
+				vine.scrollFactor.set(0, 0);
+				vinesNShit.add(vine);
+				FlxTween.tween(vine, { x: FlxG.width - 500 }, 2, { type: FlxTweenType.ONESHOT, ease: FlxEase.backOut, onComplete: function (tween:FlxTween):Void {
+					FlxTween.tween(vine, { x: FlxG.width + 350 }, 2, { type: FlxTweenType.ONESHOT, ease: FlxEase.backIn, onComplete: function (tween:FlxTween):Void {
+						vine.destroy();
+					}});
+				}});
+
+				
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -4058,7 +4078,6 @@ class PlayState extends MusicBeatState
 		return -1;
 	}
 	#end
-
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;
 }
