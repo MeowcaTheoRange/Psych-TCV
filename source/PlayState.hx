@@ -201,6 +201,8 @@ class PlayState extends MusicBeatState
 
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
+	var lite:BGSprite;
+	var pikko:BGSprite;
 	var santa:BGSprite;
 	var heyTimer:Float;
 
@@ -365,6 +367,29 @@ class PlayState extends MusicBeatState
 					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
+				}
+			
+			case 'silver-stg': //Silver's Stage
+				var bg:BGSprite = new BGSprite('curtainbg', -396.5, -210, 1, 1);
+				var bg2:BGSprite = new BGSprite('stage', -666.5, -360, 1, 1);
+				bg.setGraphicSize(Std.int(bg.width * 1.25));
+				bg2.setGraphicSize(Std.int(bg2.width * 1.25));
+				add(bg);
+				add(bg2);
+				pikko = new BGSprite('epic', -666.5, -360, 1, 1, ['pik']);
+				pikko.setGraphicSize(Std.int(pikko.width * 1.25));
+				pikko.updateHitbox();
+				add(pikko);
+				var curta:BGSprite = new BGSprite('curtains', -666.5, -360, 1, 1);
+				curta.setGraphicSize(Std.int(curta.width * 1.25));
+				curta.updateHitbox();
+				add(curta);
+
+				if(!ClientPrefs.lowQuality) {
+					lite = new BGSprite('light', -666.5, -360, 1, 1);
+					lite.setGraphicSize(Std.int(lite.width * 1.25));
+					lite.updateHitbox();
+					add(lite);
 				}
 
 			case 'spooky': //Week 2
@@ -1315,6 +1340,8 @@ class PlayState extends MusicBeatState
 					case 'school' | 'schoolEvil':
 						antialias = false;
 
+					case 'silver-stg':
+						pikko.dance(true);
 					case 'mall':
 						if(!ClientPrefs.lowQuality)
 							upperBoppers.dance(true);
@@ -2827,8 +2854,8 @@ class PlayState extends MusicBeatState
 				vine.loadGraphic(Paths.image("fxandshit/EpicVineLOL"));
 				vine.scrollFactor.set(0, 0);
 				vinesNShit.add(vine);
-				FlxTween.tween(vine, { x: FlxG.width - 500 }, 2, { type: FlxTweenType.ONESHOT, ease: FlxEase.backOut, onComplete: function (tween:FlxTween):Void {
-					FlxTween.tween(vine, { x: FlxG.width + 350 }, 2, { type: FlxTweenType.ONESHOT, ease: FlxEase.backIn, onComplete: function (tween:FlxTween):Void {
+				FlxTween.tween(vine, { x: FlxG.width - 500 }, 1, { type: FlxTweenType.ONESHOT, ease: FlxEase.expoOut, onComplete: function (tween:FlxTween):Void {
+					FlxTween.tween(vine, { x: FlxG.width + 350 }, 2, { type: FlxTweenType.ONESHOT, ease: FlxEase.backIn, startDelay: 1, onComplete: function (tween:FlxTween):Void {
 						vine.destroy();
 					}});
 				}});
