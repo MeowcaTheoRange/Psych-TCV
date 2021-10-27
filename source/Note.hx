@@ -141,6 +141,7 @@ class Note extends FlxSprite
 					case 3:
 						animToPlay = 'red';
 				}
+				
 				animation.play(animToPlay + 'Scroll');
 			}
 		}
@@ -264,10 +265,17 @@ class Note extends FlxSprite
 	}
 
 	function loadNoteAnims() {
-		animation.addByPrefix('greenScroll', 'green0');
-		animation.addByPrefix('redScroll', 'red0');
-		animation.addByPrefix('blueScroll', 'blue0');
-		animation.addByPrefix('purpleScroll', 'purple0');
+		if (PlayState.SONG.arrowSkin == "ghNOTE_assets") {
+			animation.addByPrefix('greenScroll', 'green alone');
+			animation.addByPrefix('redScroll', 'red alone');
+			animation.addByPrefix('blueScroll', 'blue alone');
+			animation.addByPrefix('purpleScroll', 'purple alone');
+		} else {
+			animation.addByPrefix('greenScroll', 'green0');
+			animation.addByPrefix('redScroll', 'red0');
+			animation.addByPrefix('blueScroll', 'blue0');
+			animation.addByPrefix('purpleScroll', 'purple0');
+		}
 
 		if (isSustainNote)
 		{
@@ -282,7 +290,7 @@ class Note extends FlxSprite
 			animation.addByPrefix('bluehold', 'blue hold piece');
 		}
 
-		setGraphicSize(Std.int(width * 0.7));
+		setGraphicSize(Std.int(width * (PlayState.SONG.arrowSkin == "ghNOTE_assets" ? 0.4 : 0.7)));
 		updateHitbox();
 	}
 
