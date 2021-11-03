@@ -207,6 +207,7 @@ class PlayState extends MusicBeatState
 	var bottomBoppers:BGSprite;
 	var lite:BGSprite;
 	var pikko:BGSprite;
+	var allieSecretlol:BGSprite;
 	var santa:BGSprite;
 	var heyTimer:Float;
 
@@ -269,7 +270,7 @@ class PlayState extends MusicBeatState
 		camOther = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
-
+		
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
 		FlxG.cameras.add(camOther);
@@ -395,6 +396,22 @@ class PlayState extends MusicBeatState
 					lite.updateHitbox();
 					add(lite);
 				}
+			
+			case 'mikey': //Umm lets hope this works
+				var bg:BGSprite = new BGSprite('mikey/stageback', -396, -210, 1, 1);
+				var bg2:BGSprite = new BGSprite('mikey/stagefront', -666, 600, 1, 1);
+				bg.setGraphicSize(Std.int(bg.width));
+				bg2.setGraphicSize(Std.int(bg2.width));
+				add(bg);
+				add(bg2);
+				allieSecretlol = new BGSprite('mikey/epic', -198, -35, 1, 1, ['AllieDoorIdle', 'AllieDoorOpen', 'AllieDoorRealization', "AllieDoorAll"]);
+				allieSecretlol.setGraphicSize(Std.int(allieSecretlol.width * 1.5));
+				allieSecretlol.updateHitbox();
+				add(allieSecretlol);
+				var book:BGSprite = new BGSprite('mikey/books', -666, -210, 1, 1);
+				book.setGraphicSize(Std.int(book.width));
+				book.updateHitbox();
+				add(book);
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
@@ -1094,7 +1111,7 @@ class PlayState extends MusicBeatState
 	}
 
 	public function reloadHealthBarColors() {
-		healthBar.createFilledBar(0xFF000000, FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
+		healthBar.createFilledBar(SONG.arrowSkin == "ghNOTE_assets" ? 0xFF000000 : FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]), FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 		healthBar.updateBar();
 	}
 
@@ -1377,6 +1394,10 @@ class PlayState extends MusicBeatState
 
 					case 'silver-stg':
 						pikko.dance(true);
+
+					case 'mikey':
+						allieSecretlol.dance(true, false, 'AllieDoorIdle');
+
 					case 'mall':
 						if(!ClientPrefs.lowQuality)
 							upperBoppers.dance(true);
@@ -2829,6 +2850,9 @@ class PlayState extends MusicBeatState
 				char.playAnim(value1, true);
 				char.specialAnim = true;
 
+			case '<mikey> DOOR ANIM':
+				allieSecretlol.dance(false, (value1 == "true"), value2);
+
 			case 'Camera Follow Pos':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
@@ -4031,6 +4055,9 @@ class PlayState extends MusicBeatState
 
 				if(heyTimer <= 0) bottomBoppers.dance(true);
 				santa.dance(true);
+
+			case 'silver-stg':
+				pikko.dance(true);
 
 			case 'limo':
 				if(!ClientPrefs.lowQuality) {

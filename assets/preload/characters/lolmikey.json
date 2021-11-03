@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				141
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "mikey_IDLE"
+		},
+		{
+			"offsets": [
+				26,
+				142
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mikey_LEFT"
+		},
+		{
+			"offsets": [
+				7,
+				97
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "mikey_DOWN"
+		},
+		{
+			"offsets": [
+				-6,
+				171
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "mikey_UP"
+		},
+		{
+			"offsets": [
+				-2,
+				141
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "mikey_RIGHT"
+		},
+		{
+			"offsets": [
+				0,
+				142
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "special",
+			"indices": [],
+			"name": "mikey_SPECIAL"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MIKEYOMG",
+	"position": [
+		120,
+		230
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-100,
+		-250
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

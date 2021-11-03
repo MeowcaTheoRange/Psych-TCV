@@ -29,9 +29,9 @@ class BGSprite extends FlxSprite
 		//antialiasing = ClientPrefs.globalAntialiasing;
 	}
 
-	public function dance(?forceplay:Bool = false) {
+	public function dance(?forceplay:Bool = false, ?backwards:Bool = false, ?anime:String) {
 		if(idleAnim != null) {
-			animation.play(idleAnim, forceplay);
+			animation.play(anime != null ? anime : idleAnim, forceplay, backwards);
 		}
 	}
 }

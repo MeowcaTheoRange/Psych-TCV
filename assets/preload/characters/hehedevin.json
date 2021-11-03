@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				141
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "devinidle"
+		},
+		{
+			"offsets": [
+				1,
+				164
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "devinLEFT"
+		},
+		{
+			"offsets": [
+				-53,
+				77
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "devindown"
+		},
+		{
+			"offsets": [
+				103,
+				155
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "HESINGUP"
+		},
+		{
+			"offsets": [
+				-18,
+				155
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "singrightllll"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/devinLol",
+	"position": [
+		170,
+		-150
+	],
+	"healthicon": "devin",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		180,
+		255
+	],
+	"camera_position": [
+		160,
+		-40
+	],
+	"sing_duration": 4,
+	"scale": 0.8
+}
