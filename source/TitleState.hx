@@ -97,6 +97,13 @@ class TitleState extends MusicBeatState
 		}
 
 		FlxG.mouse.visible = false;
+		CoolUtil.precacheMusic('freakyMenuweek0');
+		CoolUtil.precacheMusic('freakyMenuweek1');
+		CoolUtil.precacheMusic('freakyMenuweek2');
+		CoolUtil.precacheMusic('freakyMenuweek3');
+		CoolUtil.precacheMusic('freakyMenuweek4');
+		CoolUtil.precacheMusic('freakyMenuweek5');
+		CoolUtil.precacheMusic('freakyMenuweek6');
 		#if FREEPLAY
 		MusicBeatState.switchState(new FreeplayState());
 		#elseif CHARTING

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="epic.png">
+	<!--
+	Created with ShoeBox
+	http://renderhjs.net/shoebox/
+	-->
+	<SubTexture name="AllieDoorIdle0001"	x="0"	y="0"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0000"	x="0"	y="0"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0001"	x="0"	y="721"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0002"	x="0"	y="1442"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0003"	x="0"	y="2163"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0004"	x="0"	y="2884"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0005"	x="0"	y="3605"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0006"	x="0"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0007"	x="1318"	y="0"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0008"	x="1318"	y="721"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0009"	x="2636"	y="2884"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0010"	x="1318"	y="2163"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0011"	x="1318"	y="2884"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0012"	x="1318"	y="3605"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0013"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0014"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0015"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0016"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0017"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0018"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0019"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0020"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0021"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0022"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0023"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0024"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0025"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0026"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0027"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0028"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorOpen0029"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorRealization0001"	x="2636"	y="0"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorRealization0002"	x="2636"	y="721"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorRealization0003"	x="2636"	y="1442"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorRealization0004"	x="2636"	y="2163"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorRealization0005"	x="1318"	y="1442"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorRealization0006"	x="1318"	y="1442"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0000"	x="0"	y="0"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0000"	x="0"	y="0"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0001"	x="0"	y="721"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0002"	x="0"	y="1442"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0003"	x="0"	y="2163"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0004"	x="0"	y="2884"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0005"	x="0"	y="3605"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0006"	x="0"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0007"	x="1318"	y="0"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0008"	x="1318"	y="721"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0009"	x="2636"	y="2884"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0010"	x="1318"	y="2163"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0011"	x="1318"	y="2884"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0012"	x="1318"	y="3605"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0013"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0014"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0015"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0016"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0017"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0018"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0019"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0020"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0021"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0022"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0023"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0024"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0025"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0026"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0027"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0028"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0029"	x="1318"	y="4326"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0030"	x="2636"	y="0"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0031"	x="2636"	y="721"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0032"	x="2636"	y="1442"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0033"	x="2636"	y="2163"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0034"	x="1318"	y="1442"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+	<SubTexture name="AllieDoorAll0035"	x="1318"	y="1442"	width="1317"	height="720" frameX="-0" frameY="-0" frameWidth="1317" frameHeight="720"/>
+</TextureAtlas>

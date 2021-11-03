@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="epic.png">
+	<!--
+	Created with ShoeBox
+	http://renderhjs.net/shoebox/
+	-->
+	<SubTexture name="pik0000"	x="0"	y="1168"	width="2160"	height="1167" frameX="-0" frameY="-0" frameWidth="2160" frameHeight="1167"/>
+	<SubTexture name="pik0001"	x="0"	y="2336"	width="2160"	height="1167" frameX="-0" frameY="-0" frameWidth="2160" frameHeight="1167"/>
+	<SubTexture name="pik0002"	x="2161"	y="0"	width="2160"	height="1167" frameX="-0" frameY="-0" frameWidth="2160" frameHeight="1167"/>
+	<SubTexture name="pik0003"	x="0"	y="0"	width="2160"	height="1167" frameX="-0" frameY="-0" frameWidth="2160" frameHeight="1167"/>
+</TextureAtlas>

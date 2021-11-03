@@ -940,6 +940,24 @@
 			},
 			{
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 100,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 100
+			},
+			{
+				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
@@ -951,9 +969,10 @@
 		"player2": "gf",
 		"player3": "gf",
 		"song": "idk",
-		"validScore": true,
 		"needsVoices": false,
-		"arrowSkin": "",
+		"validScore": true,
+		"arrowSkin": "ghNOTE_assets",
+		"stage": "silver-stg",
 		"sections": 0,
 		"bpm": 100,
 		"speed": 1.8
