@@ -2409,9 +2409,9 @@ class PlayState extends MusicBeatState
 
 						if(daNote.mustPress || !daNote.ignoreNote)
 						{
-							if (daNote.isSustainNote
+							if (daNote.isSustainNote //THIS LINE SCARES ME
 								&& daNote.y + daNote.offset.y * daNote.scale.y <= center
-								&& (!daNote.mustPress || (daNote.wasGoodHit || (daNote.prevNote.wasGoodHit && !daNote.canBeHit))))
+								&& (!daNote.mustPress || (daNote.wasGoodHit || (daNote.prevNote.wasGoodHit && !daNote.canBeHit)))) // SO DOES THIS ONE
 							{
 								var swagRect = new FlxRect(0, 0, daNote.width / daNote.scale.x, daNote.height / daNote.scale.y);
 								swagRect.y = (center - daNote.y) / daNote.scale.y;
@@ -2425,57 +2425,85 @@ class PlayState extends MusicBeatState
 
 				if (!daNote.mustPress && daNote.wasGoodHit && !daNote.hitByOpponent && !daNote.ignoreNote)
 				{
+					var animToPlay:String = '';
 					if (SONG.song != 'Tutorial')
 						camZooming = true;
+					var rand = (daNote.isSustainNote ? 1 : FlxG.random.int(0, 4));
+					if (rand == 3) {
+						if(dad.curCharacter == "lolmikey") {
+							FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
+							daNote.hitByOpponent = true;
+							health += daNote.missHealth; //For testing purposes
+							songMisses--;
 
-					if(daNote.noteType == 'Hey!' && dad.animOffsets.exists('hey')) {
-						dad.playAnim('hey', true);
-						dad.specialAnim = true;
-						dad.heyTimer = 0.6;
+							if (SONG.needsVoices)
+								vocals.volume = 0;
+
+							switch (Math.abs(daNote.noteData))
+								{
+									case 0:
+										animToPlay = 'singLEFTmiss';
+									case 1:
+										animToPlay = 'singDOWNmiss';
+									case 2:
+										animToPlay = 'singUPmiss';
+									case 3:
+										animToPlay = 'singRIGHTmiss';
+								}
+							dad.playAnim(animToPlay, true);
+
+							callOnLuas('opponentNoteMiss', [notes.members.indexOf(daNote), Math.abs(daNote.noteData), daNote.noteType, daNote.isSustainNote]);
+						}
 					} else {
-						var altAnim:String = "";
+						if(daNote.noteType == 'Hey!' && dad.animOffsets.exists('hey')) {
+							dad.playAnim('hey', true);
+							dad.specialAnim = true;
+							dad.heyTimer = 0.6;
+						} else {
+							var altAnim:String = "";
 
-						if (SONG.notes[Math.floor(curStep / 16)] != null)
-						{
-							if (SONG.notes[Math.floor(curStep / 16)].altAnim || daNote.noteType == 'Alt Animation') {
-								altAnim = '-alt';
+							if (SONG.notes[Math.floor(curStep / 16)] != null)
+							{
+								if (SONG.notes[Math.floor(curStep / 16)].altAnim || daNote.noteType == 'Alt Animation') {
+									altAnim = '-alt';
+								}
 							}
+
+							switch (Math.abs(daNote.noteData))
+							{
+								case 0:
+									animToPlay = 'singLEFT';
+								case 1:
+									animToPlay = 'singDOWN';
+								case 2:
+									animToPlay = 'singUP';
+								case 3:
+									animToPlay = 'singRIGHT';
+							}
+							dad.playAnim(animToPlay + altAnim, true);
 						}
 
-						var animToPlay:String = '';
-						switch (Math.abs(daNote.noteData))
+						dad.holdTimer = 0;
+
+						if (SONG.needsVoices)
+							vocals.volume = 1;
+
+						var time:Float = 0.15;
+						if(daNote.isSustainNote && !daNote.animation.curAnim.name.endsWith('end')) {
+							time += 0.15;
+						}
+						StrumPlayAnim(true, Std.int(Math.abs(daNote.noteData)) % 4, time);
+						daNote.hitByOpponent = true;
+
+						callOnLuas('opponentNoteHit', [notes.members.indexOf(daNote), Math.abs(daNote.noteData), daNote.noteType, daNote.isSustainNote]);
+
+						if (!daNote.isSustainNote)
 						{
-							case 0:
-								animToPlay = 'singLEFT';
-							case 1:
-								animToPlay = 'singDOWN';
-							case 2:
-								animToPlay = 'singUP';
-							case 3:
-								animToPlay = 'singRIGHT';
+							daNote.kill();
+							notes.remove(daNote, true);
+							daNote.destroy();
 						}
-						dad.playAnim(animToPlay + altAnim, true);
-					}
 
-					dad.holdTimer = 0;
-
-					if (SONG.needsVoices)
-						vocals.volume = 1;
-
-					var time:Float = 0.15;
-					if(daNote.isSustainNote && !daNote.animation.curAnim.name.endsWith('end')) {
-						time += 0.15;
-					}
-					StrumPlayAnim(true, Std.int(Math.abs(daNote.noteData)) % 4, time);
-					daNote.hitByOpponent = true;
-
-					callOnLuas('opponentNoteHit', [notes.members.indexOf(daNote), Math.abs(daNote.noteData), daNote.noteType, daNote.isSustainNote]);
-
-					if (!daNote.isSustainNote)
-					{
-						daNote.kill();
-						notes.remove(daNote, true);
-						daNote.destroy();
 					}
 				}
 
@@ -3581,6 +3609,29 @@ class PlayState extends MusicBeatState
 			}
 			vocals.volume = 0;
 		}
+	}
+
+	function mikeyMiss(direction:Int = 1):Void
+	{
+			health += 0.04;
+			if(!endingSong) {
+				songMisses--;
+			}
+
+			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
+
+			switch (direction)
+			{
+				case 0:
+					dad.playAnim('singLEFTmiss', true);
+				case 1:
+					dad.playAnim('singDOWNmiss', true);
+				case 2:
+					dad.playAnim('singUPmiss', true);
+				case 3:
+					dad.playAnim('singRIGHTmiss', true);
+			}
+			vocals.volume = 0;
 	}
 
 	function goodNoteHit(note:Note):Void

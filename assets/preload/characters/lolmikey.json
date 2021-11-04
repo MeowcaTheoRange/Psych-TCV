@@ -57,6 +57,50 @@
 		},
 		{
 			"offsets": [
+				26,
+				142
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "missmikey_LEFT"
+		},
+		{
+			"offsets": [
+				7,
+				97
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "missmikey_DOWN"
+		},
+		{
+			"offsets": [
+				-6,
+				171
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "missmikey_UP"
+		},
+		{
+			"offsets": [
+				-2,
+				141
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "missmikey_RIGHT"
+		},
+		{
+			"offsets": [
 				0,
 				142
 			],
