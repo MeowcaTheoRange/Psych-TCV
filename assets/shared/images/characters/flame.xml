@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="epic.png">
+	<!--
+	Created with ShoeBox
+	http://renderhjs.net/shoebox/
+	-->
+	<SubTexture name="singDOWN"	x="1657"	y="0"	width="1656"	height="904" frameX="-0" frameY="-0" frameWidth="1656" frameHeight="904"/>
+	<SubTexture name="idle0000"	x="1657"	y="1810"	width="1656"	height="904" frameX="-0" frameY="-0" frameWidth="1656" frameHeight="904"/>
+	<SubTexture name="idle0001"	x="0"	y="1810"	width="1656"	height="904" frameX="-0" frameY="-0" frameWidth="1656" frameHeight="904"/>
+	<SubTexture name="idle0002"	x="0"	y="905"	width="1656"	height="904" frameX="-0" frameY="-0" frameWidth="1656" frameHeight="904"/>
+	<SubTexture name="singLEFT"	x="0"	y="0"	width="1656"	height="904" frameX="-0" frameY="-0" frameWidth="1656" frameHeight="904"/>
+	<SubTexture name="singRIGHT"	x="0"	y="2715"	width="1656"	height="904" frameX="-0" frameY="-0" frameWidth="1656" frameHeight="904"/>
+	<SubTexture name="singUP"	x="1657"	y="905"	width="1656"	height="904" frameX="-0" frameY="-0" frameWidth="1656" frameHeight="904"/>
+</TextureAtlas>

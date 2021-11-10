@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="mikey3d.png">
+	<!--
+	Created with ShoeBox
+	http://renderhjs.net/shoebox/
+	-->
+	<SubTexture name="singDOWN"	x="1025"	y="0"	width="1024"	height="1024" frameX="-0" frameY="-0" frameWidth="1024" frameHeight="1024"/>
+	<SubTexture name="idle0000"	x="1025"	y="2050"	width="1024"	height="1024" frameX="-0" frameY="-0" frameWidth="1024" frameHeight="1024"/>
+	<SubTexture name="idle0001"	x="1025"	y="1025"	width="1024"	height="1024" frameX="-0" frameY="-0" frameWidth="1024" frameHeight="1024"/>
+	<SubTexture name="idle0002"	x="2050"	y="0"	width="1024"	height="1024" frameX="-0" frameY="-0" frameWidth="1024" frameHeight="1024"/>
+	<SubTexture name="singLEFT"	x="0"	y="2050"	width="1024"	height="1024" frameX="-0" frameY="-0" frameWidth="1024" frameHeight="1024"/>
+	<SubTexture name="singRIGHT"	x="0"	y="1025"	width="1024"	height="1024" frameX="-0" frameY="-0" frameWidth="1024" frameHeight="1024"/>
+	<SubTexture name="singUP"	x="0"	y="0"	width="1024"	height="1024" frameX="-0" frameY="-0" frameWidth="1024" frameHeight="1024"/>
+</TextureAtlas>

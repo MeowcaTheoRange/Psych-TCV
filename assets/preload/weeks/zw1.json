@@ -1,0 +1,25 @@
+{
+	"storyName": "ZFans Week 1 (epic swag moment)",
+	"hideFreeplay": false,
+	"weekBackground": "limo",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"out of bounds",
+			"flame",
+			[
+				0,
+				0,
+				0
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "Week 1"
+}

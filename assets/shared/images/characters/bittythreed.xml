@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="bittythreed.png">
+	<SubTexture name="singDOWN"	x="695"	y="564"	width="694"	height="563" frameX="-0" frameY="-0" frameWidth="694" frameHeight="563"/>
+	<SubTexture name="idle0000"	x="1390"	y="0"	width="694"	height="563" frameX="-0" frameY="-0" frameWidth="694" frameHeight="563"/>
+	<SubTexture name="idle0001"	x="0"	y="1128"	width="694"	height="563" frameX="-0" frameY="-0" frameWidth="694" frameHeight="563"/>
+	<SubTexture name="idle0002"	x="0"	y="564"	width="694"	height="563" frameX="-0" frameY="-0" frameWidth="694" frameHeight="563"/>
+	<SubTexture name="singLEFT"	x="0"	y="0"	width="694"	height="563" frameX="-0" frameY="-0" frameWidth="694" frameHeight="563"/>
+	<SubTexture name="singRIGHT"	x="695"	y="0"	width="694"	height="563" frameX="-0" frameY="-0" frameWidth="694" frameHeight="563"/>
+	<SubTexture name="singUP"	x="695"	y="1128"	width="694"	height="563" frameX="-0" frameY="-0" frameWidth="694" frameHeight="563"/>
+</TextureAtlas>

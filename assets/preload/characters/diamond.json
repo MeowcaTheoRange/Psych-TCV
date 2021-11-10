@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				143
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				106,
+				143
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "singLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				17,
+				57
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "singDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-107,
+				176
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "singUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				9,
+				137
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "singRight",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/DIAMONDLOL",
+	"position": [
+		120,
+		130
+	],
+	"healthicon": "diamond",
+	"flip_x": true,
+	"healthbar_colors": [
+		195,
+		235,
+		255
+	],
+	"camera_position": [
+		-100,
+		-250
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

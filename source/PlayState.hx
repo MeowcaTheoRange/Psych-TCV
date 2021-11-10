@@ -202,6 +202,8 @@ class PlayState extends MusicBeatState
 	var grpLimoParticles:FlxTypedGroup<BGSprite>;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:BGSprite;
+	var DadNoteDistance:FlxTimer;
+	var funnyNote:Int;
 
 	var upperBoppers:BGSprite;
 	var bottomBoppers:BGSprite;
@@ -268,6 +270,7 @@ class PlayState extends MusicBeatState
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
+		DadNoteDistance = new FlxTimer();
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 		
@@ -771,7 +774,7 @@ class PlayState extends MusicBeatState
 				tweenCamIn();
 			}
 		}
-
+		Events.runPremadeEvent(1, [songName, camHUD]);
 		switch(curStage)
 		{
 			case 'limo':
@@ -1469,7 +1472,8 @@ class PlayState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('introGo' + altSuffix), 0.6);
 					case 4:
 				}
-
+				DadNoteDistance.start(0);
+				funnyNote = 2;
 				notes.forEachAlive(function(note:Note) {
 					note.copyAlpha = false;
 					note.alpha = 1 * note.multAlpha;
@@ -1531,6 +1535,7 @@ class PlayState extends MusicBeatState
 	}
 
 	var debugNum:Int = 0;
+	var songName:String;
 	private var noteTypeMap:Map<String, Bool> = new Map<String, Bool>();
 	private var eventPushedMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -1563,7 +1568,7 @@ class PlayState extends MusicBeatState
 
 		var daBeats:Int = 0; // Not exactly representative of 'daBeats' lol, just how much it has looped
 
-		var songName:String = Paths.formatToSongPath(SONG.song);
+		songName = Paths.formatToSongPath(SONG.song);
 		var file:String = Paths.json(songName + '/events');
 		#if sys
 		if (FileSystem.exists(Paths.modsJson(songName + '/events')) || FileSystem.exists(file)) {
@@ -1840,9 +1845,16 @@ class PlayState extends MusicBeatState
 			if (SONG.arrowSkin != "ghNOTE_assets")
 				FlxTween.tween(babyArrow, {y: babyArrow.y + 25 }, 1, { type: FlxTweenType.PINGPONG, ease: FlxEase.quadInOut, startDelay: 0.25 * i});
 			babyArrow.playAnim('static');
-			babyArrow.x += 50;
+			if (player != 1 && dad.curCharacter == "bitty" || dad.curCharacter == "bitty3d") {
+				babyArrow.x += 10;
+				babyArrow.scale.x /= 2;
+				babyArrow.scale.y /= 2;
+				babyArrow.updateHitbox();
+			} else {
+				babyArrow.x += 50;
+			}
 			babyArrow.x += ((FlxG.width / 2) * player);
-
+			Events.runPremadeEvent(0, [songName, player, babyArrow, i]);
 			strumLineNotes.add(babyArrow);
 		}
 	}
@@ -2334,23 +2346,31 @@ class PlayState extends MusicBeatState
 				// i am so fucking sorry for this if condition
 				var strumX:Float = 0;
 				var strumY:Float = 0;
+				var strumScaleX:Float = 0;
+				var strumScaleY:Float = 0;
 				var strumAngle:Float = 0;
 				var strumAlpha:Float = 0;
 				if (SONG.arrowSkin != "ghNOTE_assets") {
 					if(daNote.mustPress) {
 						strumX = playerStrums.members[daNote.noteData].x;
 						strumY = playerStrums.members[daNote.noteData].y;
+						strumScaleX = playerStrums.members[daNote.noteData].scale.x;
+						strumScaleY = playerStrums.members[daNote.noteData].scale.y;
 						strumAngle = playerStrums.members[daNote.noteData].angle;
 						strumAlpha = playerStrums.members[daNote.noteData].alpha;
 					} else {
 						strumX = opponentStrums.members[daNote.noteData].x;
 						strumY = opponentStrums.members[daNote.noteData].y;
+						strumScaleX = opponentStrums.members[daNote.noteData].scale.x;
+						strumScaleY = opponentStrums.members[daNote.noteData].scale.y;
 						strumAngle = opponentStrums.members[daNote.noteData].angle;
 						strumAlpha = opponentStrums.members[daNote.noteData].alpha;
 					}
 				} else {
 					strumX = playerStrums.members[daNote.noteData].x;
 					strumY = playerStrums.members[daNote.noteData].y;
+					strumScaleX = playerStrums.members[daNote.noteData].scale.x;
+					strumScaleY = playerStrums.members[daNote.noteData].scale.y;
 					strumAngle = playerStrums.members[daNote.noteData].angle;
 					if(daNote.mustPress) {
 						strumAlpha = playerStrums.members[daNote.noteData].alpha;
@@ -2363,12 +2383,15 @@ class PlayState extends MusicBeatState
 				strumAngle += daNote.offsetAngle;
 				strumAlpha *= daNote.multAlpha;
 				var center:Float = strumY + Note.swagWidth / 2;
-
 				if(daNote.copyX) {
 					daNote.x = strumX;
 				}
 				if(daNote.copyAngle) {
 					daNote.angle = strumAngle;
+					daNote.scale.x = strumScaleX;
+					if (!daNote.isSustainNote) {
+						daNote.scale.y = strumScaleY;
+					}
 				}
 				if(daNote.copyAlpha) {
 					daNote.alpha = strumAlpha;
@@ -2428,13 +2451,13 @@ class PlayState extends MusicBeatState
 					var animToPlay:String = '';
 					if (SONG.song != 'Tutorial')
 						camZooming = true;
-					var rand = (daNote.isSustainNote ? 1 : FlxG.random.int(0, 4));
-					if (rand == 3) {
+					var rand = (daNote.isSustainNote ? 1 : FlxG.random.float(0, (DadNoteDistance.elapsedTime * 10000)));
+					DadNoteDistance.reset(0);
+					if (rand > 1.5 && rand < 6 * ((SONG.speed * 1.5) / (Math.abs(daNote.noteData) == funnyNote ? 2 : 1))) {
 						if(dad.curCharacter == "lolmikey") {
 							FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
 							daNote.hitByOpponent = true;
 							health += daNote.missHealth; //For testing purposes
-							songMisses--;
 
 							if (SONG.needsVoices)
 								vocals.volume = 0;
@@ -2450,6 +2473,8 @@ class PlayState extends MusicBeatState
 									case 3:
 										animToPlay = 'singRIGHTmiss';
 								}
+							if (FlxG.random.int(1, 3) == 2)
+								StrumPlayAnim(true, FlxG.random.int(0, 3, [Std.int(Math.abs(daNote.noteData))]), 0.15);
 							dad.playAnim(animToPlay, true);
 
 							callOnLuas('opponentNoteMiss', [notes.members.indexOf(daNote), Math.abs(daNote.noteData), daNote.noteType, daNote.isSustainNote]);
@@ -2505,6 +2530,7 @@ class PlayState extends MusicBeatState
 						}
 
 					}
+					funnyNote = Std.int(Math.abs(daNote.noteData));
 				}
 
 				if(daNote.mustPress && cpuControlled) {
